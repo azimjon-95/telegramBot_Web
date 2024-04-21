@@ -1,11 +1,12 @@
 import React from 'react';
 import './style.css'
+import { Button } from 'antd'
 
-const Button = (props) => {
+const Buttons = (props) => {
 
     return (
-        <button {...props} className={`genericButton` + props.className} />
+        <Button  {...props} className={`genericButton` + props.className} />
     )
 }
 
-export default Button
+export default Buttons
