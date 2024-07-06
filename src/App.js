@@ -5,7 +5,7 @@ import Main from './components/Header/Main';
 import { Button } from 'antd'
 
 const App = () => {
-  const { tg, onToggleButton } = useTelegram()
+  const { tg, onClose } = useTelegram()
 
   useEffect(() => {
     tg.ready()
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="">
       <Main />
-      <Button onClick={onToggleButton}>Toggle</Button>
+      <Button onClick={onClose}>Toggle</Button>
     </div>
   )
 }

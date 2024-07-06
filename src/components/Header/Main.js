@@ -3,7 +3,7 @@ import './style.css';
 import { useTelegram } from '../../hooks/useTelegram';
 
 const Main = () => {
-    const { onClose, onToggleButton, increment, decrement } = useTelegram();
+    const { onClose, increment, decrement } = useTelegram();
     const [count, setCount] = useState(0);
 
     return (
@@ -12,7 +12,6 @@ const Main = () => {
             <div className="button-container">
                 <button className="Main-button" onClick={() => increment(count, setCount)}>Increment</button>
                 <button className="Main-button" onClick={() => decrement(count, setCount)}>Decrement</button>
-                <button className="Main-button" onClick={onToggleButton}>Toggle Main Button</button>
                 <button className="Main-button" onClick={onClose}>Close</button>
             </div>
         </div>
@@ -20,3 +19,5 @@ const Main = () => {
 }
 
 export default Main;
+
+
